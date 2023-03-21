@@ -1,6 +1,14 @@
 function getComputerChoice() {
+  random_num = Math.floor(Math.random() * 3) + 1;
 
-  return "rock";
+  switch(random_num) {
+    case 1:
+      return 'rock';
+    case 2:
+      return 'paper';
+    case 3:
+      return 'scissors';
+  }
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -12,28 +20,28 @@ function playRound(playerSelection, computerSelection) {
       return "You lose";
     }
     if(computerSelection == 'scissors') {
-      return "you win!";
+      return "You win!";
     }
   }
 
   if(playerSelection == 'paper') {
     if(computerSelection == 'rock') {
-      return "you win!";
+      return "You win!";
     }
     if(computerSelection == 'paper') {
-      return "draw";
+      return "Draw";
     }
     if(computerSelection == 'scissors') {
-      return "you lose";
+      return "You lose";
     }
   } 
 
   if(playerSelection == 'scissors') {
     if(computerSelection == 'rock') {
-      return "you lose";
+      return "You lose";
     }
     if(computerSelection == 'paper') {
-      return "you win!";
+      return "You win!";
     }
     if(computerSelection == 'scissors') {
       return "Draw";
