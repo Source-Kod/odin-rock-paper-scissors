@@ -50,11 +50,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function getPlayerChoice() {
-  let selection = ""
+  let selection = "";
   while(!(selection === 'rock' || selection === 'paper' || selection === 'scissors')) {
     selection = prompt("choose rock paper or scissors").toLowerCase();
   }
-  return selection
+  return selection;
 }
 
 function main() {
@@ -64,5 +64,9 @@ function main() {
   console.log(playRound(playerSelection, computerSelection));
 }
 
-main()
+let rounds = 0
+while( rounds < 5) {
+  main();
+  rounds++;
+}
 
