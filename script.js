@@ -39,14 +39,14 @@ function playRound(playerSelection, computerSelection) {
       return "Draw";
     }
   } 
-
-  if(!(playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissors')) {
-    return 'error';
-  }
 }
 
 function getPlayerChoice() {
- return prompt("choose rock paper or scissors").toLowerCase();
+  let selection = ""
+  while(!(selection === 'rock' || selection === 'paper' || selection === 'scissors')) {
+    selection = prompt("choose rock paper or scissors").toLowerCase();
+  }
+  return selection
 }
 
 function main() {
