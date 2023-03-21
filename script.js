@@ -46,7 +46,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function getPlayerChoice() {
- return prompt("choose rock paper or scissors");
+ return prompt("choose rock paper or scissors").toLowerCase();
 }
 
 function main() {
