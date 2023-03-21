@@ -56,3 +56,5 @@ function main() {
   console.log(playRound(playerSelection, computerSelection));
 }
 
+main()
+
