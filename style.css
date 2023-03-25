@@ -1,17 +1,20 @@
 body {
   margin: 0;
-  background-color: darkgrey;
+  background-color: #282b36;
   width: 100vw;
   height: 100vh;
 }
 .options img {
   width: 200px;
   height: 200px;
+  border-radius: 10px;
 }
 
 .options {
   display: flex;
   justify-content: space-evenly;
+  padding-top: 20vh;
+  color: #e8e6e3;
 }
 
 .options div {

@@ -64,6 +64,22 @@ function main() {
   console.log(playRound(playerSelection, computerSelection));
 }
 
+function createEventListeners() {
+  let rock_img = document.querySelector('#rock_img')
+  let paper_img = document.querySelector('#paper_img')
+  let scissors_img = document.querySelector('#scissors_img')
+
+  rock_img.addEventListener('click', () => {
+    alert('worked!')
+  })
+  paper_img.addEventListener('click', () => {
+    alert('worked!')
+  })
+  scissors_img.addEventListener('click', () => {
+    alert('worked!')
+  })
+}
+
 // let rounds = 0
 // while( rounds < 5) {
 //   main();
@@ -71,3 +87,4 @@ function main() {
 // }
 
 // main();
+createEventListeners()
