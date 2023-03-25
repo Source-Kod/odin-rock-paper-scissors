@@ -64,9 +64,10 @@ function main() {
   console.log(playRound(playerSelection, computerSelection));
 }
 
-let rounds = 0
-while( rounds < 5) {
-  main();
-  rounds++;
-}
+// let rounds = 0
+// while( rounds < 5) {
+//   main();
+//   rounds++;
+// }
 
+// main();
