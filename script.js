@@ -1,3 +1,8 @@
+//globals var for scores
+let playerscore_int = 0;
+let computerscore_int = 0;
+
+//makes a random selection for computer
 function getComputerChoice() {
   random_num = Math.floor(Math.random() * 3) + 1;
 
@@ -49,19 +54,27 @@ function playRound(playerSelection, computerSelection) {
   } 
 }
 
-function getPlayerChoice() {
-  let selection = "";
-  while(!(selection === 'rock' || selection === 'paper' || selection === 'scissors')) {
-    selection = prompt("choose rock paper or scissors").toLowerCase();
+function scoreUpdater(str) {
+  let playerscore = document.querySelector('#player_score');
+  let result = document.querySelector('#result');
+  let computerscore = document.querySelector('#computer_score');
+
+
+  if(str === 'You win!') {
+    playerscore_int++;
+    playerscore.textContent = playerscore_int;
+    result.textContent = "You win!";
   }
-  return selection;
-}
 
-function main() {
-  let computerSelection = getComputerChoice();
-  let playerSelection = getPlayerChoice();
+  if(str === 'You lose') {
+    computerscore_int++;
+    computerscore.textContent = computerscore_int;
+    result.textContent = "You lose";
+  }
 
-  console.log(playRound(playerSelection, computerSelection));
+  if(str === 'Draw') {
+    result.textContent = "It's a draw!";
+  }
 }
 
 function createEventListeners() {
@@ -70,7 +83,7 @@ function createEventListeners() {
   let scissors_img = document.querySelector('#scissors_img')
 
   rock_img.addEventListener('click', () => {
-    alert('worked!')
+    console.log(playRound('rock',getComputerChoice()))
   })
   paper_img.addEventListener('click', () => {
     alert('worked!')
@@ -80,11 +93,4 @@ function createEventListeners() {
   })
 }
 
-// let rounds = 0
-// while( rounds < 5) {
-//   main();
-//   rounds++;
-// }
-
-// main();
 createEventListeners()
