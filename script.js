@@ -19,37 +19,37 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
   if(playerSelection == 'rock') {
     if(computerSelection == 'rock') {
-      return "Draw";
+      scoreUpdater("Draw");
     }
     if(computerSelection == 'paper') {
-      return "You lose";
+      scoreUpdater("You lose");
     }
     if(computerSelection == 'scissors') {
-      return "You win!";
+      scoreUpdater("You win!");
     }
   }
 
   if(playerSelection == 'paper') {
     if(computerSelection == 'rock') {
-      return "You win!";
+      scoreUpdater("You win!");
     }
     if(computerSelection == 'paper') {
-      return "Draw";
+      scoreUpdater("Draw");
     }
     if(computerSelection == 'scissors') {
-      return "You lose";
+      scoreUpdater("You lose");
     }
   } 
 
   if(playerSelection == 'scissors') {
     if(computerSelection == 'rock') {
-      return "You lose";
+      scoreUpdater("You lose");
     }
     if(computerSelection == 'paper') {
-      return "You win!";
+      scoreUpdater("You win!");
     }
     if(computerSelection == 'scissors') {
-      return "Draw";
+      scoreUpdater("Draw");
     }
   } 
 }
@@ -83,13 +83,13 @@ function createEventListeners() {
   let scissors_img = document.querySelector('#scissors_img')
 
   rock_img.addEventListener('click', () => {
-    console.log(playRound('rock',getComputerChoice()))
+    playRound('rock',getComputerChoice());
   })
   paper_img.addEventListener('click', () => {
-    alert('worked!')
+    playRound('paper',getComputerChoice());
   })
   scissors_img.addEventListener('click', () => {
-    alert('worked!')
+    playRound('scissors',getComputerChoice());
   })
 }
 
